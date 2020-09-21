@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Validation\Rule;
 return [
 
     /*
