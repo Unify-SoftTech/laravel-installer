@@ -30,6 +30,7 @@ class FinalController extends Controller
             Artisan::call('config:clear');
             Artisan::call('view:clear');
             Artisan::call('route:clear');
+            Artisan::call('storage:link');
         }catch (\Exception $e){
 
         }
