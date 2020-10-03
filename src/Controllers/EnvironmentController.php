@@ -75,8 +75,8 @@ class EnvironmentController extends Controller
         event(new EnvironmentSaved($input));
 
         // فيريفيكاسيون كود
-        $itmId="26409320";
-        $token = "aVH71sVL6UA91XchRumA8AHY5tahMXBp";
+        $itmId="28767055";
+        $token = "nYN4SRsqBcJon4spJwL7OADARyOBngQ6";
         $errors = null;
         $code = env('PURCHASE_CODE',false);
         if (!preg_match("/^(\w{8})-((\w{4})-){3}(\w{12})$/", $code)) {
