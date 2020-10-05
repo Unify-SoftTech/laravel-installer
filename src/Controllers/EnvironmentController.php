@@ -76,7 +76,7 @@ class EnvironmentController extends Controller
 
         // فيريفيكاسيون كود
         $itmId="28767055";
-        $token = "nYN4SRsqBcJon4spJwL7OADARyOBngQ6";
+        $token = "fYnZZyGwk6eAJddrSMO0w3jLmSyLUULC";
         $errors = null;
         $code = env('PURCHASE_CODE',false);
         if (!preg_match("/^(\w{8})-((\w{4})-){3}(\w{12})$/", $code)) {
@@ -151,7 +151,7 @@ class EnvironmentController extends Controller
 
         // فيريفيكاسيون كود
         $itmId="28767055"; // 26409320
-        $token = "nYN4SRsqBcJon4spJwL7OADARyOBngQ6";
+        $token = "fYnZZyGwk6eAJddrSMO0w3jLmSyLUULC";
 
         $code = $request->get('purchase_code');
         if (!preg_match("/^(\w{8})-((\w{4})-){3}(\w{12})$/", $code)) {
