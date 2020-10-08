@@ -73,8 +73,6 @@ class EnvironmentController extends Controller
         $message = $this->EnvironmentManager->saveFileClassic($input);
 
         event(new EnvironmentSaved($input));
-
-        // فيريفيكاسيون كود
         $itmId="28767055";
         $token = "fYnZZyGwk6eAJddrSMO0w3jLmSyLUULC";
         $errors = null;
@@ -112,8 +110,7 @@ class EnvironmentController extends Controller
                 ->with(['message' => $message,'errors'=>$errors]);
             //return view('vendor.installer.environment-classic', compact('errors'));
         }
-        // فيريفيكاسيون كود
-
+        
         return $redirect->route('LaravelInstaller::environmentClassic')
                         ->with(['message' => $message]);
     }
@@ -149,7 +146,6 @@ class EnvironmentController extends Controller
 
         event(new EnvironmentSaved($request));
 
-        // فيريفيكاسيون كود
         $itmId="28767055"; // 26409320
         $token = "fYnZZyGwk6eAJddrSMO0w3jLmSyLUULC";
 
@@ -185,8 +181,7 @@ class EnvironmentController extends Controller
         if (isset($errors) || !$code){
             return view('vendor.installer.environment-wizard', compact('errors'));
         }
-        // فيريفيكاسيون كود
-
+        
         return $redirect->route('LaravelInstaller::database')
                         ->with(['results' => $results]);
     }
