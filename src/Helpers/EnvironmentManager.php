@@ -126,8 +126,8 @@ class EnvironmentManager
         'FILESYSTEM_DRIVER=local'."\n".
         'API_USER=testapiuser'."\n".
         'API_KEY=testapikey'."\n".
-        'FFMPEG='."\n".
-        'FFPROBE='."\n".
+        'FFMPEG=/usr/bin/ffmpeg'."\n".
+        'FFPROBE=/usr/bin/ffprobe'."\n".
         'APP_VERSION=';
 
         try {
