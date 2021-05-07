@@ -30,7 +30,7 @@ class UpdateController extends Controller
     {
         $migrations = $this->getMigrations($version);
         //$dbMigrations = $this->getExecutedMigrations();
-        $seeders = glob(database_path().DIRECTORY_SEPARATOR.'seeds'.DIRECTORY_SEPARATOR.$version.DIRECTORY_SEPARATOR.'*.php');
+        $seeders = glob(database_path().DIRECTORY_SEPARATOR.'seeds'.'*.php');
         return view('vendor.installer.update.overview', ['numberOfUpdatesPending' => count($migrations) +count($seeders),"version"=>$version]);
     }
 
