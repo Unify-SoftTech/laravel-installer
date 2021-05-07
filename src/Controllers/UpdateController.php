@@ -30,8 +30,9 @@ class UpdateController extends Controller
     {
         $migrations = $this->getMigrations($version);
         //$dbMigrations = $this->getExecutedMigrations();
-        $seeders = glob(database_path().DIRECTORY_SEPARATOR.'seeds'.'*.php');
-        return view('vendor.installer.update.overview', ['numberOfUpdatesPending' => count($migrations) +count($seeders),"version"=>$version]);
+        $seeders = glob(database_path().DIRECTORY_SEPARATOR.'seeds'.DIRECTORY_SEPARATOR.'*.php');
+        // dd($seeders);
+        return view('vendor.installer.update.overview', ['numberOfUpdatesPending' => count($migrations) + count($seeders),"version"=>$version]);
     }
 
     /**
@@ -43,7 +44,6 @@ class UpdateController extends Controller
     {
         $databaseManager = new DatabaseManager;
         $response = $databaseManager->migrateAndSeed($version);
-
         return redirect()->route('LaravelUpdater::final')
                          ->with(['message' => $response]);
     }
