@@ -52,11 +52,12 @@ class canUpdate
     public function alreadyUpdated($version)
     {
         $migrations = $this->getMigrations($version);
+        $seedCount = $this->getSeedsCount;
         $dbMigrations = $this->getExecutedMigrations();
 
         // If the count of migrations and dbMigrations is equal,
         // then the update as already been updated.
-        if (count($migrations) == 0) {
+        if (count($migrations)+$seedCount == 0) {
             return true;
         }
 

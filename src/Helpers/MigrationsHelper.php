@@ -22,6 +22,13 @@ trait MigrationsHelper
         return str_replace('.php', '', $migrations);
     }
 
+    public function getSeedsCount()
+    {
+        $seeders = glob(database_path().DIRECTORY_SEPARATOR.'seeds'.DIRECTORY_SEPARATOR.'*.php');
+        
+        return count($seeders);
+    }
+
     /**
      * Get the migrations that have already been ran.
      *
