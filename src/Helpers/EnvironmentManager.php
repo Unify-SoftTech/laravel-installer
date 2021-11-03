@@ -123,11 +123,15 @@ class EnvironmentManager
         'PUSHER_APP_ID='.$request->pusher_app_id."\n".
         'PUSHER_APP_KEY='.$request->pusher_app_key."\n".
         'PUSHER_APP_SECRET='.$request->pusher_app_secret."\n".
-        'FILESYSTEM_DRIVER=local'."\n".
+        'PUSHER_APP_CLUSTER='."\n\n".
+        'MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"'."\n".
+        'MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"'."\n".
+        'MIX_PUSHER_APP_URL="${APP_URL}"'."\n\n".
+        'FILESYSTEM_DRIVER=local'."\n\n".
         'API_USER=testapiuser'."\n".
-        'API_KEY=testapikey'."\n".
+        'API_KEY=testapikey'."\n\n".
         'FFMPEG=/usr/bin/ffmpeg'."\n".
-        'FFPROBE=/usr/bin/ffprobe'."\n".
+        'FFPROBE=/usr/bin/ffprobe'."\n\n".
         'APP_VERSION=';
 
         try {
