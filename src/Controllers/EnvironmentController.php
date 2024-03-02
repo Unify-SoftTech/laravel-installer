@@ -167,11 +167,11 @@ class EnvironmentController extends Controller
                 )
             ));
             $result = curl_exec($ch);
-            if (isset($result) && isset(json_decode($result,true)['error'])) {
+            if ($result && isset($result) && isset(json_decode($result,true)['error'])) {
                 $code = false;
                 $errors = $validator->errors()->add('purchase_code', 'Not valid purchase code 1');
             }else{
-                if (isset($result) && json_decode($result,true)['item']['id'] != $itmId) {
+                if ($result && isset($result) && json_decode($result,true)['item']['id'] != $itmId) {
                     $code = false;
                     $errors = $validator->errors()->add('purchase_code', 'Not valid purchase code 2');
                 }
