@@ -1,18 +1,19 @@
-# Laravel Web Installer | A Web Installer [Package](https://packagist.org/packages/rachidlaasri/laravel-installer)
+# Laravel Web Installer | A Web Installer [Package](https://packagist.org/packages/unifysofttech/laravel-installer)
 
-[![Total Downloads](https://poser.pugx.org/rachidlaasri/laravel-installer/d/total.svg)](https://packagist.org/packages/rachidlaasri/laravel-installer)
-[![Latest Stable Version](https://poser.pugx.org/rachidlaasri/laravel-installer/v/stable.svg)](https://packagist.org/packages/rachidlaasri/laravel-installer)
-[![License](https://poser.pugx.org/rachidlaasri/laravel-installer/license.svg)](https://packagist.org/packages/rachidlaasri/laravel-installer)
 
-- [About](#about)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Routes](#routes)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Help](#help)
-- [Screenshots](#screenshots)
-- [License](#license)
+
+- [Laravel Web Installer | A Web Installer Package](#laravel-web-installer--a-web-installer-package)
+	- [About](#about)
+	- [Requirements](#requirements)
+	- [Installation](#installation)
+	- [Routes](#routes)
+	- [Usage](#usage)
+	- [Contributing](#contributing)
+	- [Help](#help)
+	- [Screenshots](#screenshots)
+					- [Installer](#installer)
+					- [Updater](#updater)
+	- [License](#license)
 
 ## About
 
@@ -37,7 +38,7 @@ The current features are :
 1. From your projects root folder in terminal run:
 
 ```bash
-    composer require rachidlaasri/laravel-installer
+    composer require unifysofttech/laravel-installer
 ```
 
 2. Register the package
